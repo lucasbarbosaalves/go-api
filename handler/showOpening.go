@@ -7,6 +7,18 @@ import (
 	"github.com/lucasbarbosaalves/go-api/schemas"
 )
 
+// @BasePath /api/v1
+
+// @Summary Show opening
+// @Description Show job opening
+// @Tags Openings
+// @Accept  json
+// @Produce  json
+// @Param id query string true "Opening identification"
+// @Success 200 {object} ShowOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 404 {object} ErrorResponse
+// @Router /opening [get]
 func ShowOpeningHandler(ctx *gin.Context) {
 	id := ctx.Query("id")
 	if id == "" {
