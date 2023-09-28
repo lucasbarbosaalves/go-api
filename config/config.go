@@ -24,7 +24,7 @@ func Init() error {
 	return nil
 }
 
-func GetSQLite() *gorm.DB {
+func GetMySQL() *gorm.DB {
 	return db
 }
 
